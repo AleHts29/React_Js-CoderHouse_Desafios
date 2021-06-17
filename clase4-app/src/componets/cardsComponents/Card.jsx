@@ -1,19 +1,31 @@
 import React from 'react';
 import img1 from './assets/ABLETON.png';
+import {ButtonComponent} from '../ButtonComponent'
 
-
-function card({children}) {
+const Card = ({productData}) => {
     return (
-        <div className = "card">
+    
+    <>
+        <div className="container row justify-content-center">
+        <div className = " col-sm-6 card bg-dark">
+            
             <img src={img1} alt="" />
-            <div className = "card-body">
-                <h4 className = "card-title "> My Title</h4>
-                <p className = "card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus corporis minima quo repellat, debitis, excepturi expedita officia consequatur vel porro veritatis voluptatem distinctio unde dignissimos eius quibusdam velit, id tenetur.</p>
-{children}
+            <div className = "card-body text-center">
+                <h4 className = "card-title "> {productData.name}</h4>
+                <p className = "card-text ">{productData.description}</p>
+                <strong className="text-warning">Price: $ {productData.price}</strong>
+            </div>
+            <div className="m-3 text-center">
+                <ButtonComponent  text={'Comprar'}/>
             </div>
             
+            
+        </div>  
         </div>
+    </>
     )
 }
 
-export default card
+export default Card
+
+
