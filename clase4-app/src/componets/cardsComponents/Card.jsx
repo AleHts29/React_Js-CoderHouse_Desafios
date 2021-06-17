@@ -1,5 +1,5 @@
 import React from 'react';
-import img1 from './assets/ABLETON.png';
+import img1 from './assets/iphone12.jpeg';
 import {ButtonComponent} from '../ButtonComponent'
 
 const Card = ({productData}) => {
@@ -7,7 +7,7 @@ const Card = ({productData}) => {
     
     <>
         <div className="container row justify-content-center">
-        <div className = " col-sm-6 card bg-dark">
+        <div className = " col-sm-6 card bg-dark pt-3">
             
             <img src={img1} alt="" />
             <div className = "card-body text-center">
