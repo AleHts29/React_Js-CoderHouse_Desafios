@@ -7,15 +7,31 @@ const CardWidget = () => {
     return (
         <div className="text-white d-flex mr-5 mt-1" size="lg">
         <div><FiShoppingCart/></div>         
-        <div>
-        <ReactBootStrap.NavDropdown FiShoppingCart id="collasible-ReactBootStrap.Nav-dropdown">
-            <ReactBootStrap.NavDropdown.Item href="#action/3.1">Action</ReactBootStrap.NavDropdown.Item>
-            <ReactBootStrap.NavDropdown.Item href="#action/3.2">Another action</ReactBootStrap.NavDropdown.Item>
-            <ReactBootStrap.NavDropdown.Item href="#action/3.3">Something</ReactBootStrap.NavDropdown.Item>
-            <ReactBootStrap.NavDropdown.Divider />
-            <ReactBootStrap.NavDropdown.Item href="#action/3.4">Separated link</ReactBootStrap.NavDropdown.Item>
+            <div>
+            <ReactBootStrap.NavDropdown FiShoppingCart id="collasible-ReactBootStrap.Nav-dropdown">
+                       
+            <div class="container">
+                <table class="table md-12 m-4">
+                    <thead>
+                        <tr class="col">
+                            <th scope="col">#</th>
+                            <th scope="col">Item</th>
+                            <th scope="col ">Cantidad</th>
+                            <th scope="col">Total</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody id="items"></tbody>
+                    <tfoot>
+                        <tr id="footer">
+                            <th scope="row" colspan="5"> Carrito vacio - llenar</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+
            <div>
-           
             <td>
                 <button class="btn btn-warning btn-up btn-sm ml-5">
                     +
@@ -24,7 +40,6 @@ const CardWidget = () => {
                     -
                 </button>
             </td> 
-           
            </div>
        
 
