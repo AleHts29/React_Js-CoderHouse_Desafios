@@ -9,8 +9,8 @@ import HomeContainer from './containers/HomeContainer'
 function App() {
   return (
     <>
-    <Navbar/> 
-    <HomeContainer greeting={NAME_APP}/>
+    {/* <Navbar />  */}
+    <HomeContainer  greeting={NAME_APP}/>
 
     </>
   )

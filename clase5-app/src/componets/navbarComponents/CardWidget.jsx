@@ -3,10 +3,11 @@ import {FiShoppingCart} from 'react-icons/fi'
 
 import * as ReactBootStrap from 'react-bootstrap'
 
-const CardWidget = () => {
+const CardWidget = ({count}) => {
     return (
         <div className="text-white d-flex mr-5 mt-1" size="lg">
-        <div><FiShoppingCart/></div>         
+        <div><FiShoppingCart/></div> 
+        <ReactBootStrap.Nav.Link >Nº Products: {count} </ReactBootStrap.Nav.Link>        
             <div>
             <ReactBootStrap.NavDropdown FiShoppingCart id="collasible-ReactBootStrap.Nav-dropdown">
                        
@@ -34,10 +35,10 @@ const CardWidget = () => {
            <div>
             <td>
                 <button class="btn btn-warning btn-up btn-sm ml-5">
-                    +
+                    -
                 </button>
                 <button class="btn btn-warning btn-down btn-sm ml-1">
-                    -
+                    +
                 </button>
             </td> 
            </div>

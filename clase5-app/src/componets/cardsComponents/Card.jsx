@@ -1,7 +1,7 @@
 import React from 'react';
 import img1 from './assets/iphone12.jpeg';
 import {ButtonComponent} from '../ButtonComponent'
-
+import {ItemComponent} from '../ButtonComponent/ItemCount'
 const Card = ({productData}) => {
     return (
     
@@ -16,7 +16,8 @@ const Card = ({productData}) => {
                 <strong className="text-warning">Price: $ {productData.price}</strong>
             </div>
             <div className="m-3 text-center">
-                <ButtonComponent  text={'Comprar'}/>
+                
+                <ItemComponent productData={productData} text={'Agregar al Carrito'}/>
             </div>
             
             
