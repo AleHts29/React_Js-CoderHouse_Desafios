@@ -34,6 +34,7 @@ const reducer = (state, action) => {
                 ...state,
                 basket: newBasket,
             }
+            
         default: state;
     }
 }
