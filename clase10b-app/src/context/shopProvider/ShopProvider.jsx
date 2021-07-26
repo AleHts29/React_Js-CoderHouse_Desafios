@@ -8,4 +8,6 @@ export const ShopProvider = ({reducer, initialstate,  children}) => (
     </ShopContext.Provider>
 );
 
+
+// Permite consumir los datos desde cualquier componente
 export const useStateValue = () => useContext(ShopContext);

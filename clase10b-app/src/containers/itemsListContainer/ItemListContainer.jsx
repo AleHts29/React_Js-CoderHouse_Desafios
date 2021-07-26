@@ -8,7 +8,7 @@ import {products} from '../../data/product-data'
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    marginTop: '50px'
+    margin: '50px'
   },
   paper: {
     padding: theme.spacing(2),
@@ -21,7 +21,7 @@ export default function ItemListContainer() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div  className={classes.root}>
       <Grid container spacing={3}>
         {
           products.map(product => (

@@ -39,6 +39,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Navbar() {
   const classes = useStyles();
   const [{basket}, dispatch] = useStateValue();
+  const [{cantidadTotal}] = useStateValue();
 
   return (
     <div className={classes.root}>
@@ -56,7 +57,7 @@ export default function Navbar() {
           <Button variant="outlined" color="primary">Login</Button>
           <Link to='checkout-page'>
           <IconButton aria-label="show cart items" color="primary">
-            <Badge badgeContent={basket?.length} color="secondary"><ShoppingCart fontSize="large" /></Badge>
+            <Badge badgeContent={cantidadTotal} color="secondary"><ShoppingCart fontSize="large" /></Badge>
           </IconButton>
           </Link>
         </Toolbar>

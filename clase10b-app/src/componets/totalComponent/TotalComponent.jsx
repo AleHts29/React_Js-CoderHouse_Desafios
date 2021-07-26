@@ -22,14 +22,16 @@ const useStyles = makeStyles((theme)=>({
 const TotalComponent = () => {
     const classes = useStyles();
     const [{basket}, dispatch] = useStateValue();
+    const [{cantidadTotal}] = useStateValue();
+
 console.log(basket)
 const valor = getBasketTotal(basket)
-console.log(getBasketTotal(basket.price))
+console.log(cantidadTotal)
 
 
     return (
         <div className={classes.root}>
-            <h5>Total item: {basket?.length}</h5>
+            <h5>Total item: {cantidadTotal}</h5>
             <h5>{accounting.formatMoney(getBasketTotal(basket), '$')}</h5>
             
             <Button  className={classes.button} variant='contained' color='secondary'>
