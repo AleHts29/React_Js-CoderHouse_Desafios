@@ -16,8 +16,8 @@ let minAmount = 0;
     return (
     <>
     <div className="container d-flex justify-content-center ">
-
-            <button class="btn btn-warning btn-up btn-sm "
+        <div className='border'>
+            <button className="btn  btn-up btn-sm "
                 onClick = {() => {
                     if(amount > minAmount){
                         setAmount(amount-1);
@@ -26,8 +26,10 @@ let minAmount = 0;
             >
                 -
             </button>
-            <p className="ml-3 mr-3">{amount}</p>
-            <button class="btn btn-warning btn-down btn-sm "
+        </div>
+            <p className="ml-3 mr-3 mt-1 mb-0">{amount}</p>
+            <div className='border'>
+            <button className="btn  btn-down btn-sm "
             onClick = {() => {
                 if (amount == stock){
                     return stock;
@@ -37,11 +39,15 @@ let minAmount = 0;
             >
                 +
             </button>
+            </div>
+        
+
+            
     </div>
 
-    <div className="mt-3">
-        <button onClick={() => {setCart([...cart, {productData}])}}> {text}</button>
-    </div>
+    {/* <div className="mt-3">
+        <button onClick={() => {setCart([...cart, {productData}])}}> {'hola'}</button>
+    </div> */}
     
     {/* capturo la info al dar click a agregar al carrito
     <CardWidget cart={cart}/> */}

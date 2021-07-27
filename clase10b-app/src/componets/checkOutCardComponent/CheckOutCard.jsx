@@ -13,6 +13,7 @@ import DeleteIcon from '@material-ui/icons/Delete'
 import accounting from 'accounting'
 import { useStateValue } from '../../context/shopProvider/ShopProvider';
 import {actionTypes} from '../../context/reducer/reducer'
+import { ItemComponent } from '../buttonCountComponent/ItemCount';
 
 
 
@@ -32,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cardRating: {
     display: 'flex',
+    marginLeft: '3px'
   },
   
   avatar: {
@@ -84,14 +86,9 @@ export default function CheckOutCard({product:{id, name, title, desciption, imag
       </CardContent>
       <CardActions disableSpacing className={classes.cardActions}>
         
-        <div className={classes.cardRating}>
-            {/* Stars */}
-        {Array(rating)
-        .fill()
-        .map((_, i) =>(
-            <p>☆</p>
-        ))
-        }
+        {/* Falta hacer logica de la Cantidad */}
+        <div className='sm-12'>
+          <ItemComponent/>
         </div>
         <IconButton>
             <DeleteIcon onClick={removeItem}/>
